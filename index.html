@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prodato</title>
+  <meta name="description" content="Prodato | Advisory, tax, accounting and business solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand">PRODATO</a>
+
+      <nav class="desktop-nav">
+        <a href="#firm">Firm</a>
+        <a href="#services">Practice Areas</a>
+        <a href="#insights">Content</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-switch" type="button">ES / EN</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" type="button" aria-label="Cerrar menú">×</button>
+    <nav class="mobile-nav">
+      <a href="#firm">Firm</a>
+      <a href="#services">Practice Areas</a>
+      <a href="#insights">Content</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <p class="hero-kicker">Advisory Firm</p>
+        <h1>
+          Strategic solutions for companies operating in demanding environments.
+        </h1>
+        <p class="hero-text">
+          Prodato advises businesses on tax, accounting, finance and management matters,
+          combining technical precision with a practical business approach.
+        </p>
+        <a href="#firm" class="hero-link">Discover more</a>
+      </div>
+
+      <div class="hero-side-note">Paraguay</div>
+    </section>
+
+    <section class="firm-section" id="firm">
+      <div class="container firm-grid">
+        <div class="firm-left">
+          <p class="section-label">The Firm</p>
+          <h2>
+            A professional practice built around clarity, trust and sound judgment.
+          </h2>
+        </div>
+
+        <div class="firm-right">
+          <p>
+            We work closely with companies, shareholders, directors and management teams,
+            helping them navigate tax, accounting and financial challenges with rigor and perspective.
+          </p>
+          <p>
+            Our work is grounded in technical quality, responsiveness and a clear understanding
+            of business needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label light">Practice Areas</p>
+          <h2>Capabilities</h2>
+        </div>
+
+        <div class="services-list">
+          <article class="service-row">
+            <span>01</span>
+            <h3>Tax</h3>
+            <p>Tax advisory, planning, compliance and strategic support for businesses.</p>
+          </article>
+
+          <article class="service-row">
+            <span>02</span>
+            <h3>Accounting</h3>
+            <p>Financial reporting, closings, structure and ongoing accounting assistance.</p>
+          </article>
+
+          <article class="service-row">
+            <span>03</span>
+            <h3>Corporate Finance</h3>
+            <p>Analysis, indicators and support for business and board-level decisions.</p>
+          </article>
+
+          <article class="service-row">
+            <span>04</span>
+            <h3>Audit & Control</h3>
+            <p>Review of processes, internal controls and improvement opportunities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="insights-section" id="insights">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">Content</p>
+          <h2>Recent insights</h2>
+        </div>
+
+        <div class="insights-grid">
+          <article class="insight-feature">
+            <p class="insight-type">Insight</p>
+            <h3>Tax considerations that deserve board-level attention</h3>
+            <p>
+              A practical view of relevant tax matters that may have a direct impact
+              on governance and decision-making.
+            </p>
+            <a href="#">Read article</a>
+          </article>
+
+          <article class="insight-small">
+            <p class="insight-type">Analysis</p>
+            <h3>Financial indicators that improve management quality</h3>
+            <a href="#">Read article</a>
+          </article>
+
+          <article class="insight-small">
+            <p class="insight-type">Update</p>
+            <h3>Compliance, documentation and business organization</h3>
+            <a href="#">Read article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-section">
+      <div class="container statement-box">
+        <p class="section-label light">Prodato</p>
+        <h2>
+          Technical strength, business perspective and a professional standard
+          aligned with complex decisions.
+        </h2>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="section-label light">Contact</p>
+          <h2>Get in touch</h2>
+          <p>
+            We can adapt this website with real profiles, articles, office information,
+            bilingual pages and a working contact form.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="company" placeholder="Company" />
+          <textarea id="message" rows="6" placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+          <p id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>PRODATO</span>
+      <div class="footer-links">
+        <a href="#firm">Firm</a>
+        <a href="#services">Practice Areas</a>
+        <a href="#insights">Content</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
