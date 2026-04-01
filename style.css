@@ -748,7 +748,8 @@ color: #243a76;
   }
 
   .hero-image {
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    clip-path: none;
+filter: none;
   }
 
   .team-controls {
