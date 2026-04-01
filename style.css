@@ -145,13 +145,10 @@ textarea {
 .hero-image {
   position: absolute;
   inset: 0;
-  background:
-    url("./imagenes/megusta_150.jpg")
-    center center / cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
-  filter: brightness(0.42);
+  background: url("./imagenes/megusta_150.jpg") center center / cover no-repeat;
+  clip-path: none;
+  filter: none;
 }
-
 
 .hero-content {
   z-index: 2;
