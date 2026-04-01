@@ -1042,10 +1042,82 @@ color: #243a76;
 /* =========================
    AJUSTES MOBILE FINOS
    ========================= */
-@media (max-width: 820px) {
+/* HERO RESPONSIVE ORDENADO */
+.hero-content {
+  max-width: 560px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.05;
+  max-width: 12ch;
+}
+
+.hero-text {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  max-width: 36ch;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .hero-content {
+    max-width: 460px;
+  }
+
   .hero h1 {
-    font-size: clamp(1.55rem, 4.8vw, 2rem);
-    line-height: 1.1;
-    max-width: 240px;
+    font-size: clamp(2rem, 6vw, 3rem);
+    max-width: 11ch;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 320px;
+    padding-top: 130px;
+    padding-bottom: 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+    max-width: 10ch;
+    line-height: 1.08;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+    max-width: 28ch;
+  }
+
+  .hero-side-note {
+    display: none;
+  }
+}
+
+/* MOBILE CHICO */
+@media (max-width: 480px) {
+  .hero-content {
+    max-width: 280px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 6.4vw, 1.9rem);
+    max-width: 9ch;
+  }
+}
+
+/* CELULAR HORIZONTAL */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding-top: 95px;
+    padding-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
   }
 }
