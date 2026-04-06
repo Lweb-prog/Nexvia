@@ -64,6 +64,10 @@ const teamPrev = document.getElementById("teamPrev");
 const teamNext = document.getElementById("teamNext");
 
 let currentTeamSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+const teamSlider = document.querySelector(".team-slider");
+
 
 function showTeamSlide(index) {
   teamSlides.forEach((slide) => slide.classList.remove("active"));
@@ -98,6 +102,40 @@ if (teamSlides.length > 0) {
       showTeamSlide(currentTeamSlide);
     });
   }
+}
+if (teamSlider) {
+  teamSlider.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  teamSlider.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].clientX;
+      handleTeamSwipe();
+    },
+    { passive: true }
+  );
+}
+
+function handleTeamSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  if (Math.abs(swipeDistance) < 40) return;
+
+  if (swipeDistance < 0) {
+    currentTeamSlide =
+      currentTeamSlide === teamSlides.length - 1 ? 0 : currentTeamSlide + 1;
+  } else {
+    currentTeamSlide =
+      currentTeamSlide === 0 ? teamSlides.length - 1 : currentTeamSlide - 1;
+  }
+
+  showTeamSlide(currentTeamSlide);
 }
 
 /* SERVICE TOGGLE */
